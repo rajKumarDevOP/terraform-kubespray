@@ -1,0 +1,14 @@
+plugin: amazon.aws.aws_ec2
+
+regions:
+  - ap-south-1
+
+filters:
+  tag:Cluster: ai-cluster
+  instance-state-name: running
+
+keyed_groups:
+  - key: tags.Role
+
+compose:
+  ansible_host: private_ip_address
