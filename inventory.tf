@@ -31,7 +31,7 @@ locals {
 
 resource "local_file" "kubespray_inventory" {
 
-  filename = "./kubespray/inventory/mycluster/inventory.ini"
+  filename = "./kubespray/inventory/ai-cluster/inventory.ini"
 
   content = templatefile("${path.module}/templates/inventory.tpl", {
     masters = local.masters
