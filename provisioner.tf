@@ -7,7 +7,7 @@ resource "null_resource" "copy_files" {
 
   connection {
     type        = "ssh"
-    host        = aws_instance.master[0].public_ip
+    host        = aws_instance.master[0].private_ip
     user        = "ubuntu"
     private_key = file(var.private_key_path)
   }
