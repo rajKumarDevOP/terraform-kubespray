@@ -36,7 +36,7 @@ resource "local_file" "kubespray_inventory" {
   content = templatefile("${path.module}/templates/inventory.tpl", {
     masters = local.masters
     workers = local.workers
-     key_name = var.key_name
+    key_name = var.key_name
   })
 }
 
