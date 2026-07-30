@@ -14,7 +14,7 @@ resource "null_resource" "copy_files" {
 
   # Copy inventory
   provisioner "file" {
-    source      = "/home/ubuntu/kubespray/inventory/ai-cluster/inventory.ini"
+    source      = "${path.module}/kubespray/inventory/ai-cluster/inventory.ini"
     destination = "/home/ubuntu/kubespray/inventory/ai-cluster/inventory.ini"
   }
 
