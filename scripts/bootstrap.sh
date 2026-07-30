@@ -14,9 +14,9 @@ chown -R ubuntu:ubuntu kubespray
 
 cd kubespray
 cp -rf /home/ubuntu/kubespray/inventory/sample /home/ubuntu/kubespray/inventory/ai-cluster
+chown -R ubuntu:ubuntu /home/ubuntu/kubespray
 python3 -m venv venv
 
 ./venv/bin/pip install --upgrade pip
 ./venv/bin/pip install -r requirements.txt
 
-chown -R ubuntu:ubuntu inventory/ai-cluster
