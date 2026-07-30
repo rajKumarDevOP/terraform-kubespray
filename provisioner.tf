@@ -12,6 +12,12 @@ resource "null_resource" "copy_files" {
     private_key = file(var.private_key_path)
   }
 
+  provisioner "remote-exec" {
+    inline = [
+      "cloud-init status --wait"
+    ]
+  }
+
   # Copy inventory
   provisioner "file" {
     source      = "${path.module}/kubespray/inventory/ai-cluster/inventory.ini"
