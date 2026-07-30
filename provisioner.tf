@@ -26,8 +26,8 @@ resource "null_resource" "copy_files" {
 
   # Copy SSH key
   provisioner "file" {
-    source      = file(var.private_key_path)
-    destination = file(var.private_key_path)
+    source      = var.private_key_path
+    destination = var.private_key_path
   }
 
   # Set permissions
