@@ -12,3 +12,4 @@ admin_ips = [
 ami               = "ami-01a00762f46d584a1"
 subnet_id         = "subnet-04263aca923778714"
 security_group_id = "sg-04157a955fc3b30f8"
+private_key_path = "/home/ubuntu/.ssh/terrakey.pem"

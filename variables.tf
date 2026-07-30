@@ -34,4 +34,4 @@ variable "ami" {
 
 }
 variable "security_group_id" {}
- 
+variable "private_key_path" {}

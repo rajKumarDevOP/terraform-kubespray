@@ -17,7 +17,8 @@ resource "aws_instance" "master" {
     volume_size = 30
     volume_type = "gp3"
   }
-  user_data = file("scripts/bootstrap.sh")
+ 
+  # user_data = file("scripts/bootstrap.sh")
   tags = {
     Name    = "master-${count.index + 1}"
     Role    = "kube_control_plane"
