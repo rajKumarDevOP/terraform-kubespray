@@ -1,5 +1,3 @@
-
-
 [all]
 %{ for node in masters ~}
 ${node.name} ansible_host=${node.private_ip} ip=${node.private_ip} etcd_member_name=${node.etcd_name}
@@ -29,3 +27,8 @@ kube_control_plane
 kube_node
 
 [calico_rr]
+
+[all:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=/home/ubuntu/.ssh/${key_name}.pem
+ansible_python_interpreter=/usr/bin/python3
